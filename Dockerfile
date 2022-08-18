@@ -59,6 +59,8 @@ RUN cd /opt/rti.com/rti_connext_dds-5.3.1/resource/scripts && source ./rtisetenv
 # Build ROS packages
 # RUN source /opt/ros/galactic/setup.bash && colcon build --symlink-install
 
+WORKDIR /
 # Copy entrypoint
+COPY entrypoint.sh /
 
-ENTRYPOINT ["./entrypoint.sh"]
+# ENTRYPOINT ["./entrypoint.sh"]
